@@ -11,7 +11,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 
 app.use(express.json());
 
-app.use('user', require('./routes/userRouter'))
+app.use('/user', require('./routes/userRouter'))
 
 app.listen(process.env.PORT, () => {
     console.log(`The server is running on ${process.env.PORT}`)
